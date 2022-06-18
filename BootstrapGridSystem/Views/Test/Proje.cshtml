@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .blog-add{
+        font-size:8px;
+        text-decoration:underline;
+    }
+    .kenarlik{
+        border-bottom-style:solid;
+        border-bottom-width:2px;
+        border-bottom-color:yellow;
+        padding-bottom:15px;
+    }
+</style>
+
+<div class="row" style="background-color:antiquewhite">
+
+    <div class="col-md-4">
+        <h2 class="text-center">GİRİŞ YAP</h2>
+
+        <div class="col-md-12 form-group">
+            <label> Kullanıcı Adı: </label>
+            <input id="txtKullaniciAdi" class="form-control" />
+        </div>
+
+        <div class="col-md-12 form-group">
+            <label> Şifrenizi: </label>
+            <input id="txtSifre" type="password" class="form-control" />
+        </div>
+
+        <div class="col-md-12 form-group">
+            <button class="btn btn-primary">Giriş Yap</button>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-4">
+        <h2 class="text-center">KAYIT OL</h2>
+
+      
+        @using (@Html.BeginForm("KayitOl", "Test", FormMethod.Post))
+        {
+        <div class="col-md-6 form-group">
+            <label> Ad: </label>
+            <input name="txtKayitOlAd" class="form-control" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label> Soyad: </label>
+            <input name="txtKayitOlSoyad" class="form-control" />
+        </div>
+
+        <div class="col-md-6 form-group">
+            <label> Telefon No: </label>
+            <input name="txtKayitOlTelNo" required class="form-control" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label> Email: </label>
+            <input name="txtKayitOlMail" type="email" class="form-control" />
+        </div>
+
+        <div class="col-md-4 form-group">
+            <label> Kullanıcı Adı: </label>
+            <input name="txtKayitOlKullaniciAdi" class="form-control" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label> Şifre: </label>
+            <input name="txtKayitOlSifre" type="password" class="form-control" />
+        </div>
+        <div class="col-md-4 form-group">
+            <label> Şifre T: </label>
+            <input name="txtKayitOlSifreT" type="password" class="form-control" />
+        </div>
+
+        <div class="col-md-12 form-group">
+            <label> Adres: </label>
+            <textarea name="txtKayitOlAdres" rows="2" class="form-control"></textarea>
+        </div>
+
+        <div class="col-md-6 form-group">
+            <label> İl: </label>
+            <input name="txtKayitOlIl" class="form-control" />
+        </div>
+
+        <div class="col-md-6 form-group">
+            <label> İlçe: </label>
+            <input name="txtKayitOlIlce" class="form-control" />
+        </div>
+
+        <div class="col-md-12 form-group">
+            <button class="btn btn-success">Kayıt Ol</button>
+        </div>
+
+        }
+    </div>
+
+    <div class="col-md-4">
+        <h2 class="text-center">DUYURULAR</h2>
+
+        <div class="col-md-12 kenarlik">
+            <div class="col-md-12">
+                <h4 style="color:red;">Sistemiz Yeniden Güncellendi.</h4>
+            </div>
+            <div class="col-md-12">
+                <p>Sistemizdeki hatalar giderildi. Bu kapsamda performans iyileştirmeleride yapılmış oldu.</p>
+            </div>
+            <div class="col-md-4 blog-add">
+                Uğurcan Özcan
+            </div>
+            <div class="col-md-4  blog-add">
+                04.06.2022
+            </div>
+            <div class="col-md-4  blog-add">
+                12:17
+            </div>
+        </div>
+
+        <div class="col-md-12 kenarlik">
+            <div class="col-md-12">
+                <h4 style="color:red">Sistemiz Yeniden Güncellendi.</h4>
+            </div>
+            <div class="col-md-12">
+                <p>Sistemizdeki hatalar giderildi. Bu kapsamda performans iyileştirmeleride yapılmış oldu.</p>
+            </div>
+            <div class="col-md-4  blog-add">
+                Uğurcan Özcan
+            </div>
+            <div class="col-md-4  blog-add">
+                04.06.2022
+            </div>
+            <div class="col-md-4  blog-add">
+                12:17
+            </div>
+        </div>
+
+        <div class="col-md-12 kenarlik">
+            <div class="col-md-12">
+                <h4 style="color:red">Sistemiz Yeniden Güncellendi.</h4>
+            </div>
+            <div class="col-md-12">
+                <p>Sistemizdeki hatalar giderildi. Bu kapsamda performans iyileştirmeleride yapılmış oldu.</p>
+            </div>
+            <div class="col-md-4  blog-add">
+                Uğurcan Özcan
+            </div>
+            <div class="col-md-4  blog-add">
+                04.06.2022
+            </div>
+            <div class="col-md-4  blog-add">
+                12:17
+            </div>
+        </div>
+
+    </div>
+
+</div>
